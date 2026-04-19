@@ -94,7 +94,7 @@
       border-color: #c4492e;
     }
 
-    /* Hero section — inspired by prime decor's clean but strong visual */
+    /* Hero section */
     .hero {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -195,7 +195,7 @@
       border-radius: 20px;
     }
 
-    /* Features / USP bar (like primedecor free delivery vibe) */
+    /* USP bar */
     .usp-bar {
       background: #1e1e1e;
       color: #f0e8e0;
@@ -245,112 +245,127 @@
       border-radius: 4px;
     }
 
-    /* product categories grid */
-    .category-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 24px;
-      margin-top: 10px;
+    /* Category headings inside popular prints */
+    .category-section {
+      margin-bottom: 48px;
     }
 
-    .category-card {
-      background: white;
-      border-radius: 24px;
-      padding: 28px 16px 24px;
-      text-align: center;
-      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.02);
-      border: 1px solid #ede6df;
-      transition: all 0.25s;
-      text-decoration: none;
-      color: inherit;
-      display: block;
+    .category-heading {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 24px;
     }
 
-    .category-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 20px 30px -8px rgba(196, 73, 46, 0.1);
-      border-color: #c4492e;
-    }
-
-    .category-icon {
-      font-size: 48px;
-      color: #c4492e;
-      margin-bottom: 20px;
-    }
-
-    .category-card h3 {
-      font-size: 22px;
+    .category-heading h3 {
+      font-size: 28px;
       font-weight: 700;
-      margin-bottom: 8px;
+      letter-spacing: -0.01em;
+      color: #1e1e1e;
     }
 
-    .category-card p {
-      color: #5f5b57;
-      font-size: 15px;
+    .category-heading a {
+      color: #c4492e;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 16px;
     }
 
-    /* featured products (sample, like primedecor product cards) */
-    .products-grid {
+    .category-heading a i {
+      margin-left: 6px;
+    }
+
+    /* Instagram-style product cards */
+    .product-row {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 26px;
-      margin: 30px 0 20px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
     }
 
-    .product-card {
+    .insta-card {
       background: white;
       border-radius: 20px;
       overflow: hidden;
-      box-shadow: 0 6px 14px rgba(0,0,0,0.02);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.02);
       border: 1px solid #e9e2db;
       transition: all 0.2s;
     }
 
-    .product-card:hover {
-      box-shadow: 0 20px 30px -10px rgba(0,0,0,0.08);
-      border-color: #d6c9be;
+    .insta-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 24px 30px -10px rgba(196, 73, 46, 0.1);
+      border-color: #c4492e;
     }
 
-    .product-img {
+    .insta-img {
       aspect-ratio: 1 / 1;
-      background: #ece4dd;
+      background: #d9cdc2;
+      position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #4a3f38;
-      font-size: 48px;
     }
 
-    .product-info {
-      padding: 18px 16px 20px;
+    /* Instagram mock styling */
+    .insta-img i {
+      font-size: 64px;
+      color: #2c241e;
+      opacity: 0.8;
     }
 
-    .product-title {
+    .insta-overlay {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: rgba(0,0,0,0.5);
+      backdrop-filter: blur(4px);
+      color: white;
+      padding: 6px 12px;
+      border-radius: 30px;
+      font-size: 13px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .insta-overlay i {
+      font-size: 14px;
+      color: white;
+      opacity: 1;
+    }
+
+    .insta-info {
+      padding: 16px 16px 18px;
+    }
+
+    .insta-title {
       font-weight: 700;
       font-size: 18px;
-      margin-bottom: 6px;
+      margin-bottom: 4px;
     }
 
-    .product-price {
+    .insta-price {
       color: #c4492e;
       font-weight: 700;
       font-size: 20px;
-      margin-bottom: 14px;
+      margin-bottom: 12px;
     }
 
-    .product-meta {
-      color: #716b65;
-      font-size: 14px;
+    .insta-meta {
       display: flex;
       gap: 12px;
+      color: #716b65;
+      font-size: 13px;
       margin-bottom: 16px;
     }
 
-    .btn-small {
+    .btn-ig-small {
       background: #1e1e1e;
       color: white;
       border: none;
-      padding: 10px 16px;
+      padding: 10px 14px;
       border-radius: 40px;
       font-weight: 600;
       font-size: 14px;
@@ -362,15 +377,15 @@
       text-decoration: none;
     }
 
-    .btn-small i {
+    .btn-ig-small i {
       margin-right: 6px;
     }
 
-    .btn-small:hover {
+    .btn-ig-small:hover {
       background: #c4492e;
     }
 
-    /* instagram embed / CTA block */
+    /* Instagram CTA block */
     .insta-showcase {
       background: #f3ede7;
       border-radius: 40px;
@@ -398,10 +413,6 @@
       font-weight: 600;
       box-shadow: 0 4px 8px rgba(0,0,0,0.02);
       margin: 20px 0 10px;
-    }
-
-    .insta-showcase .btn-primary {
-      margin-top: 12px;
     }
 
     .insta-preview {
@@ -509,7 +520,7 @@
       .btn-group {
         justify-content: center;
       }
-      .category-grid, .products-grid {
+      .product-row {
         grid-template-columns: repeat(2, 1fr);
       }
       .navbar {
@@ -521,8 +532,8 @@
       }
     }
 
-    @media (max-width: 560px) {
-      .category-grid, .products-grid {
+    @media (max-width: 600px) {
+      .product-row {
         grid-template-columns: 1fr;
       }
       .usp-grid {
@@ -547,22 +558,6 @@
         justify-content: center;
       }
     }
-
-    /* Placeholder image stylings */
-    .img-placeholder {
-      background: #d9cec4;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .mock-badge {
-      background: white;
-      padding: 12px 24px;
-      border-radius: 40px;
-      font-weight: 600;
-    }
   </style>
 </head>
 <body>
@@ -572,8 +567,7 @@
       <a href="#" class="logo">Voids<span>Prints</span></a>
       <div class="nav-links">
         <a href="#">Home</a>
-        <a href="#categories">Shop</a>
-        <a href="#featured">Featured</a>
+        <a href="#featured">Shop</a>
         <a href="#about">About</a>
       </div>
       <a href="https://www.instagram.com/voidsprints/" target="_blank" class="insta-header">
@@ -585,14 +579,13 @@
     <section class="hero">
       <div class="hero-content">
         <h1>Make your space <span class="hero-highlight">void of ordinary</span></h1>
-        <p>Custom shirts, gallery‑grade posters, handcrafted frames & premium stickers — all printed with attitude. Pakistan’s freshest print shop.</p>
+        <p>Custom shirts, gallery‑grade posters, handcrafted frames & premium stickers — all printed with attitude. DM to order.</p>
         <div class="btn-group">
           <a href="https://www.instagram.com/voidsprints/" target="_blank" class="btn-primary"><i class="fab fa-instagram"></i> Order via Instagram</a>
-          <a href="#categories" class="btn-outline">Explore collection <i class="fas fa-arrow-right"></i></a>
+          <a href="#featured" class="btn-outline">Explore collection <i class="fas fa-arrow-right"></i></a>
         </div>
       </div>
       <div class="hero-image">
-        <!-- abstract product mock (shirt, poster, frame) -->
         <div style="display: flex; gap: 12px; flex-wrap: wrap; justify-content: center;">
           <div style="background: #2b2520; width: 120px; height: 140px; border-radius: 16px; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; padding: 10px; box-shadow: 0 12px 0 #0f0e0d;"><i class="fas fa-tshirt" style="font-size: 48px; color: #dbd2c9;"></i><span style="color:#ece3da; margin-top: 8px;">SHIRT</span></div>
           <div style="background: #dbcdc0; width: 140px; height: 160px; border-radius: 20px; box-shadow: 0 10px 0 #ab9c8f; display: flex; align-items: center; justify-content: center;"><i class="fas fa-image" style="font-size: 64px; color: #2b2b2b;"></i></div>
@@ -601,7 +594,7 @@
       </div>
     </section>
 
-    <!-- USP bar similar to primedecor free delivery etc -->
+    <!-- USP bar -->
     <div class="usp-bar">
       <div class="usp-grid container" style="padding:0 8px;">
         <div class="usp-item"><i class="fas fa-truck"></i> Free delivery nationwide</div>
@@ -611,76 +604,203 @@
       </div>
     </div>
 
-    <!-- Categories section -->
-    <div id="categories">
-      <h2 class="section-title">What we print</h2>
-    </div>
-    <div class="category-grid">
-      <a href="#" class="category-card">
-        <div class="category-icon"><i class="fas fa-tshirt"></i></div>
-        <h3>Shirts</h3>
-        <p>Premium cotton & oversized fits. Custom designs, bands, art.</p>
-      </a>
-      <a href="#" class="category-card">
-        <div class="category-icon"><i class="fas fa-print"></i></div>
-        <h3>Posters</h3>
-        <p>Matte/gloss finish. A5 to A1. Anime, abstract, typography.</p>
-      </a>
-      <a href="#" class="category-card">
-        <div class="category-icon"><i class="fas fa-border-all"></i></div>
-        <h3>Frames</h3>
-        <p>Wooden & acrylic frames. Ready to hang, made to order.</p>
-      </a>
-      <a href="#" class="category-card">
-        <div class="category-icon"><i class="fas fa-sticky-note"></i></div>
-        <h3>Stickers</h3>
-        <p>Die‑cut vinyl, holographic, weatherproof. Laptop & car safe.</p>
-      </a>
+    <!-- POPULAR PRINTS – now divided into 4 categories with Instagram mock images -->
+    <div id="featured">
+      <h2 class="section-title">Popular prints · from our IG</h2>
     </div>
 
-    <!-- Featured products (like primedecor popular items) -->
-    <div id="featured">
-      <h2 class="section-title">Popular prints</h2>
+    <!-- 1. SHIRTS -->
+    <div class="category-section">
+      <div class="category-heading">
+        <h3><i class="fas fa-tshirt" style="margin-right: 10px; color:#c4492e;"></i> Shirts</h3>
+        <a href="https://www.instagram.com/voidsprints/" target="_blank">See more on IG <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="product-row">
+        <!-- Shirt item 1 -->
+        <div class="insta-card">
+          <div class="insta-img" style="background: #b1a092;">
+            <i class="fas fa-tshirt"></i>
+            <span class="insta-overlay"><i class="fab fa-instagram"></i> @voidsprints</span>
+          </div>
+          <div class="insta-info">
+            <div class="insta-title">VOID HEAVYWEIGHT TEE</div>
+            <div class="insta-price">Rs. 2,450</div>
+            <div class="insta-meta"><span>100% cotton</span><span>oversized</span></div>
+            <a href="https://www.instagram.com/voidsprints/" target="_blank" class="btn-ig-small"><i class="fab fa-instagram"></i> Order via DM</a>
+          </div>
+        </div>
+        <!-- Shirt item 2 -->
+        <div class="insta-card">
+          <div class="insta-img" style="background: #9e8f81;">
+            <i class="fas fa-tshirt"></i>
+            <span class="insta-overlay"><i class="fab fa-instagram"></i> @voidsprints</span>
+          </div>
+          <div class="insta-info">
+            <div class="insta-title">DISTORTED LOGO TEE</div>
+            <div class="insta-price">Rs. 2,650</div>
+            <div class="insta-meta"><span>pre-shrunk</span><span>unisex</span></div>
+            <a href="https://www.instagram.com/voidsprints/" target="_blank" class="btn-ig-small"><i class="fab fa-instagram"></i> Order via DM</a>
+          </div>
+        </div>
+        <!-- Shirt item 3 -->
+        <div class="insta-card">
+          <div class="insta-img" style="background: #7f6e5e;">
+            <i class="fas fa-tshirt"></i>
+            <span class="insta-overlay"><i class="fab fa-instagram"></i> @voidsprints</span>
+          </div>
+          <div class="insta-info">
+            <div class="insta-title">ABSTRACT VOID (BLACK)</div>
+            <div class="insta-price">Rs. 2,350</div>
+            <div class="insta-meta"><span>ring-spun</span><span>limited</span></div>
+            <a href="https://www.instagram.com/voidsprints/" target="_blank" class="btn-ig-small"><i class="fab fa-instagram"></i> Order via DM</a>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="products-grid">
-      <!-- product 1: shirt -->
-      <div class="product-card">
-        <div class="product-img" style="background: #b7aa9c;"><i class="fas fa-tshirt" style="font-size: 60px; color: #f1eae3;"></i></div>
-        <div class="product-info">
-          <div class="product-title">VOID HEAVYWEIGHT TEE</div>
-          <div class="product-price">Rs. 2,450</div>
-          <div class="product-meta"><span><i class="far fa-heart"></i> 100% cotton</span><span>unisex</span></div>
-          <a href="https://www.instagram.com/voidsprints/" target="_blank" class="btn-small"><i class="fab fa-instagram"></i> Order on IG</a>
+
+    <!-- 2. POSTERS -->
+    <div class="category-section">
+      <div class="category-heading">
+        <h3><i class="fas fa-image" style="margin-right: 10px; color:#c4492e;"></i> Posters</h3>
+        <a href="https://www.instagram.com/voidsprints/" target="_blank">See more on IG <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="product-row">
+        <!-- Poster 1 -->
+        <div class="insta-card">
+          <div class="insta-img" style="background: #cdbcab;">
+            <i class="fas fa-image"></i>
+            <span class="insta-overlay"><i class="fab fa-instagram"></i> @voidsprints</span>
+          </div>
+          <div class="insta-info">
+            <div class="insta-title">VOIDSCAPE (MATTE)</div>
+            <div class="insta-price">Rs. 1,650</div>
+            <div class="insta-meta"><span>A3 / A2</span><span>210gsm</span></div>
+            <a href="https://www.instagram.com/voidsprints/" target="_blank" class="btn-ig-small"><i class="fab fa-instagram"></i> Order via DM</a>
+          </div>
+        </div>
+        <!-- Poster 2 -->
+        <div class="insta-card">
+          <div class="insta-img" style="background: #b8a696;">
+            <i class="fas fa-palette"></i>
+            <span class="insta-overlay"><i class="fab fa-instagram"></i> @voidsprints</span>
+          </div>
+          <div class="insta-info">
+            <div class="insta-title">ANIME COLLAGE</div>
+            <div class="insta-price">Rs. 1,850</div>
+            <div class="insta-meta"><span>gloss finish</span><span>custom size</span></div>
+            <a href="https://www.instagram.com/voidsprints/" target="_blank" class="btn-ig-small"><i class="fab fa-instagram"></i> Order via DM</a>
+          </div>
+        </div>
+        <!-- Poster 3 -->
+        <div class="insta-card">
+          <div class="insta-img" style="background: #a39280;">
+            <i class="fas fa-camera-retro"></i>
+            <span class="insta-overlay"><i class="fab fa-instagram"></i> @voidsprints</span>
+          </div>
+          <div class="insta-info">
+            <div class="insta-title">MINIMAL TYPOGRAPHY</div>
+            <div class="insta-price">Rs. 1,550</div>
+            <div class="insta-meta"><span>matte · A4 to A1</span></div>
+            <a href="https://www.instagram.com/voidsprints/" target="_blank" class="btn-ig-small"><i class="fab fa-instagram"></i> Order via DM</a>
+          </div>
         </div>
       </div>
-      <!-- product 2: poster -->
-      <div class="product-card">
-        <div class="product-img" style="background: #d2c5b8;"><i class="fas fa-image" style="font-size: 60px; color: #1f1a16;"></i></div>
-        <div class="product-info">
-          <div class="product-title">ABSTRACT VOID POSTER</div>
-          <div class="product-price">Rs. 1,650</div>
-          <div class="product-meta"><span>A3 / A2</span><span>matte</span></div>
-          <a href="https://www.instagram.com/voidsprints/" target="_blank" class="btn-small"><i class="fab fa-instagram"></i> Order on IG</a>
+    </div>
+
+    <!-- 3. FRAMES -->
+    <div class="category-section">
+      <div class="category-heading">
+        <h3><i class="fas fa-border-all" style="margin-right: 10px; color:#c4492e;"></i> Frames</h3>
+        <a href="https://www.instagram.com/voidsprints/" target="_blank">See more on IG <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="product-row">
+        <!-- Frame 1 -->
+        <div class="insta-card">
+          <div class="insta-img" style="background: #7d6e5e;">
+            <i class="fas fa-border-all"></i>
+            <span class="insta-overlay"><i class="fab fa-instagram"></i> @voidsprints</span>
+          </div>
+          <div class="insta-info">
+            <div class="insta-title">OAK FINISH FRAME</div>
+            <div class="insta-price">Rs. 3,200</div>
+            <div class="insta-meta"><span>12x18"</span><span>wood + acrylic</span></div>
+            <a href="https://www.instagram.com/voidsprints/" target="_blank" class="btn-ig-small"><i class="fab fa-instagram"></i> Order via DM</a>
+          </div>
+        </div>
+        <!-- Frame 2 -->
+        <div class="insta-card">
+          <div class="insta-img" style="background: #9e8f7e;">
+            <i class="fas fa-vector-square"></i>
+            <span class="insta-overlay"><i class="fab fa-instagram"></i> @voidsprints</span>
+          </div>
+          <div class="insta-info">
+            <div class="insta-title">BLACK SLIM FRAME</div>
+            <div class="insta-price">Rs. 2,850</div>
+            <div class="insta-meta"><span>A3 / A4</span><span>metal finish</span></div>
+            <a href="https://www.instagram.com/voidsprints/" target="_blank" class="btn-ig-small"><i class="fab fa-instagram"></i> Order via DM</a>
+          </div>
+        </div>
+        <!-- Frame 3 -->
+        <div class="insta-card">
+          <div class="insta-img" style="background: #b6a798;">
+            <i class="fas fa-grip-lines"></i>
+            <span class="insta-overlay"><i class="fab fa-instagram"></i> @voidsprints</span>
+          </div>
+          <div class="insta-info">
+            <div class="insta-title">FLOATING ACRYLIC</div>
+            <div class="insta-price">Rs. 3,650</div>
+            <div class="insta-meta"><span>11x14"</span><span>museum grade</span></div>
+            <a href="https://www.instagram.com/voidsprints/" target="_blank" class="btn-ig-small"><i class="fab fa-instagram"></i> Order via DM</a>
+          </div>
         </div>
       </div>
-      <!-- product 3: frame -->
-      <div class="product-card">
-        <div class="product-img" style="background: #aa9b8c;"><i class="fas fa-border-all" style="font-size: 60px; color: #ede0d6;"></i></div>
-        <div class="product-info">
-          <div class="product-title">OAK FINISH FRAME (12x18")</div>
-          <div class="product-price">Rs. 3,200</div>
-          <div class="product-meta"><span>wood + acrylic</span><span>wall mount</span></div>
-          <a href="https://www.instagram.com/voidsprints/" target="_blank" class="btn-small"><i class="fab fa-instagram"></i> Order on IG</a>
-        </div>
+    </div>
+
+    <!-- 4. STICKERS -->
+    <div class="category-section">
+      <div class="category-heading">
+        <h3><i class="fas fa-sticky-note" style="margin-right: 10px; color:#c4492e;"></i> Stickers</h3>
+        <a href="https://www.instagram.com/voidsprints/" target="_blank">See more on IG <i class="fas fa-arrow-right"></i></a>
       </div>
-      <!-- product 4: sticker pack -->
-      <div class="product-card">
-        <div class="product-img" style="background: #5f554c;"><i class="fas fa-sticky-note" style="font-size: 60px; color: #f3d9c2;"></i></div>
-        <div class="product-info">
-          <div class="product-title">VOID STICKER PACK (5 PCS)</div>
-          <div class="product-price">Rs. 850</div>
-          <div class="product-meta"><span>vinyl · waterproof</span></div>
-          <a href="https://www.instagram.com/voidsprints/" target="_blank" class="btn-small"><i class="fab fa-instagram"></i> Order on IG</a>
+      <div class="product-row">
+        <!-- Sticker pack 1 -->
+        <div class="insta-card">
+          <div class="insta-img" style="background: #c9b6a3;">
+            <i class="fas fa-sticky-note"></i>
+            <span class="insta-overlay"><i class="fab fa-instagram"></i> @voidsprints</span>
+          </div>
+          <div class="insta-info">
+            <div class="insta-title">VOID PACK VOL.1</div>
+            <div class="insta-price">Rs. 850</div>
+            <div class="insta-meta"><span>5 vinyl stickers</span><span>waterproof</span></div>
+            <a href="https://www.instagram.com/voidsprints/" target="_blank" class="btn-ig-small"><i class="fab fa-instagram"></i> Order via DM</a>
+          </div>
+        </div>
+        <!-- Sticker 2 -->
+        <div class="insta-card">
+          <div class="insta-img" style="background: #ae9a87;">
+            <i class="fas fa-heart"></i>
+            <span class="insta-overlay"><i class="fab fa-instagram"></i> @voidsprints</span>
+          </div>
+          <div class="insta-info">
+            <div class="insta-title">HOLOGRAPHIC SET</div>
+            <div class="insta-price">Rs. 1,050</div>
+            <div class="insta-meta"><span>4 pcs</span><span>holographic</span></div>
+            <a href="https://www.instagram.com/voidsprints/" target="_blank" class="btn-ig-small"><i class="fab fa-instagram"></i> Order via DM</a>
+          </div>
+        </div>
+        <!-- Sticker 3 -->
+        <div class="insta-card">
+          <div class="insta-img" style="background: #8f7e6c;">
+            <i class="fas fa-skull"></i>
+            <span class="insta-overlay"><i class="fab fa-instagram"></i> @voidsprints</span>
+          </div>
+          <div class="insta-info">
+            <div class="insta-title">DIE-CUT SINGLES</div>
+            <div class="insta-price">Rs. 350</div>
+            <div class="insta-meta"><span>each · custom shape</span></div>
+            <a href="https://www.instagram.com/voidsprints/" target="_blank" class="btn-ig-small"><i class="fab fa-instagram"></i> Order via DM</a>
+          </div>
         </div>
       </div>
     </div>
@@ -700,15 +820,15 @@
       </div>
     </div>
 
-    <!-- About / reference to primedecor style with information -->
+    <!-- About / reference -->
     <div id="about" class="about-wrap">
       <div class="about-text">
         <h3>VoidsPrints — print that speaks</h3>
-        <p>Inspired by the clean, accessible style of PrimeDecor, we offer top‑tier custom merchandise. Every shirt, poster, frame, and sticker is made with premium materials — from 1‑inch wooden back frames to high‑grade vinyl. Free delivery across Pakistan, and we stand behind every print.</p>
-        <p>Whether you need anime wall art, band merch, or corporate stickers, we’ve got you. DM us on Instagram for bulk orders or custom requests.</p>
+        <p>Inspired by clean, accessible design, we offer top‑tier custom merchandise. Every shirt, poster, frame, and sticker is made with premium materials. Free delivery across Pakistan, and we stand behind every print.</p>
+        <p>Check our Instagram for real customer photos and latest drops. DM for bulk or custom requests.</p>
         <div style="display: flex; gap: 16px; margin-top: 28px;">
           <span style="background: #e8e0d9; padding: 6px 18px; border-radius: 40px;"><i class="fas fa-check-circle" style="color:#c4492e;"></i> 8-10 days delivery</span>
-          <span style="background: #e8e0d9; padding: 6px 18px; border-radius: 40px;"><i class="fas fa-check-circle" style="color:#c4492e;"></i> 100% customisation available</span>
+          <span style="background: #e8e0d9; padding: 6px 18px; border-radius: 40px;"><i class="fas fa-check-circle" style="color:#c4492e;"></i> 100% custom</span>
         </div>
       </div>
       <div class="contact-block">
@@ -724,7 +844,7 @@
 
     <!-- Footer -->
     <footer class="footer">
-      <div>© 2026 VoidsPrints.All rights reserved.</div>
+      <div>© 2025 VoidsPrints — void of ordinary</div>
       <div class="footer-links">
         <a href="#">FAQ</a>
         <a href="#">Shipping</a>
@@ -733,11 +853,9 @@
       </div>
     </footer>
   </div>
-  <!-- tiny interactive: just for smoother anchor -->
   <script>
     (function() {
-      // optional smooth reveal (nothing heavy)
-      console.log('VoidsPrints — DM to order');
+      console.log('VoidsPrints — DM to order. All product images inspired by @voidsprints');
     })();
   </script>
 </body>
